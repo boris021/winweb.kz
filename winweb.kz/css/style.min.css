@@ -1056,14 +1056,16 @@ body.ie ._ibg img {
   .service__items-one {
     display: flex;
     flex-direction: row;
-    flex: 0 0 66%;
+    flex: 0 0 100%;
+    justify-content: center;
   }
 }
 @media (max-width: 991.98px) {
   .service__items-two {
     display: flex;
     flex-direction: row;
-    flex: 0 0 33%;
+    flex: 0 0 100%;
+    justify-content: center;
   }
 }
 @media (max-width: 767.98px) {
@@ -1074,8 +1076,8 @@ body.ie ._ibg img {
   }
 }
 .service__item {
-  margin: 0 35px 46px 0;
-  max-width: 260px;
+  margin: 0 15px 46px 0;
+  max-width: 300px;
   max-height: 309px;
   background: #FFFFFF;
   box-shadow: 0px 0px 50px rgba(106, 66, 255, 0.15);
@@ -1391,6 +1393,10 @@ body.ie ._ibg img {
   padding: 0 0 100px 0;
   background: url(../img/prise-fon.svg) center center/cover no-repeat;
 }
+.prise__container {
+  max-width: 1440px;
+  margin: auto;
+}
 .prise__body {
   display: flex;
   justify-content: space-between;
@@ -1413,14 +1419,17 @@ body.ie ._ibg img {
   }
 }
 .prise__items {
-  flex: 0 0 100%;
   margin-top: 25px;
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
   justify-content: space-between;
   flex-wrap: wrap;
 }
 @media (max-width: 767.98px) {
   .prise__items {
+    grid-template-columns: 90%;
+    gap: 30px;
     justify-content: center;
   }
 }
@@ -1428,13 +1437,16 @@ body.ie ._ibg img {
   position: relative;
   background: #FFFFFF;
   border-radius: 10px;
-  padding: 35px 30px;
+  padding: 35px 25px;
   box-shadow: 0px 0px 50px rgba(106, 66, 255, 0.15);
   transition: all 0.4s ease 0s;
   z-index: 5;
   margin: 0 0 30px 0px;
-  min-height: 650px;
-  max-width: 360px;
+}
+@media (max-width: 767.98px) {
+  .prise__item {
+    margin: 0px;
+  }
 }
 .prise__item::after {
   position: absolute;
@@ -1445,6 +1457,7 @@ body.ie ._ibg img {
   height: 100%;
   background: url(../img/prise-bg.svg) center center/cover no-repeat;
   z-index: -4;
+  border-radius: 10px;
 }
 .prise__item:hover {
   transform: translate(0, -10px);
@@ -1452,7 +1465,7 @@ body.ie ._ibg img {
 }
 .prise__title {
   font-weight: bold;
-  font-size: 26px;
+  font-size: 22px;
   color: #3C42B9;
   margin-bottom: 25px;
 }
@@ -1472,7 +1485,7 @@ body.ie ._ibg img {
 .prise__link {
   position: relative;
   font-weight: 500;
-  font-size: 16px;
+  font-size: 15px;
   line-height: 2;
   color: #4A0885;
   margin-bottom: 15px;
